@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 interface Props {
   size: number;
-  number: number;
+  number: number | string;
 }
 
 /* Constants */
@@ -14,7 +14,7 @@ const baseBorderHeight = 5;
 const baseBorder = 1;
 const baseMiddleHeight = 0.66;
 
-export default function Number({ size, number }: Props) {
+export default function DigitalNumber({ size, number }: Props) {
   /* Sizes */
   const width = baseWidth * size;
   const borderWidth = baseBorderWidth * size;
@@ -32,7 +32,7 @@ export default function Number({ size, number }: Props) {
   const [bottomColor, setBottomColor] = useState("#F2F2F2");
 
   useEffect(() => {
-    if (number === 0) {
+    if (number === 0 || number === "0") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#F2F2F2");
@@ -40,7 +40,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#F2F2F2");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#F2F2F2");
-    } else if (number === 1) {
+    } else if (number === 1 || number === "1") {
       setTopColor("#1E1E1E");
       setTopLeftColor("#1E1E1E");
       setTopRightColor("#F2F2F2");
@@ -48,7 +48,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#1E1E1E");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#1E1E1E");
-    } else if (number === 2) {
+    } else if (number === 2 || number === "2") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#1E1E1E");
       setTopRightColor("#F2F2F2");
@@ -56,7 +56,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#F2F2F2");
       setBottomRightColor("#1E1E1E");
       setBottomColor("#F2F2F2");
-    } else if (number === 3) {
+    } else if (number === 3 || number === "3") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#1E1E1E");
       setTopRightColor("#F2F2F2");
@@ -64,7 +64,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#1E1E1E");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#F2F2F2");
-    } else if (number === 4) {
+    } else if (number === 4 || number === "4") {
       setTopColor("#1E1E1E");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#F2F2F2");
@@ -72,7 +72,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#1E1E1E");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#1E1E1E");
-    } else if (number === 5) {
+    } else if (number === 5 || number === "5") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#1E1E1E");
@@ -80,7 +80,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#1E1E1E");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#F2F2F2");
-    } else if (number === 6) {
+    } else if (number === 6 || number === "6") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#1E1E1E");
@@ -88,7 +88,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#F2F2F2");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#F2F2F2");
-    } else if (number === 7) {
+    } else if (number === 7 || number === "7") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#1E1E1E");
       setTopRightColor("#F2F2F2");
@@ -96,7 +96,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#1E1E1E");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#1E1E1E");
-    } else if (number === 8) {
+    } else if (number === 8 || number === "8") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#F2F2F2");
@@ -104,7 +104,7 @@ export default function Number({ size, number }: Props) {
       setBottomLeftColor("#F2F2F2");
       setBottomRightColor("#F2F2F2");
       setBottomColor("#F2F2F2");
-    } else if (number === 9) {
+    } else if (number === 9 || number === "9") {
       setTopColor("#F2F2F2");
       setTopLeftColor("#F2F2F2");
       setTopRightColor("#F2F2F2");
